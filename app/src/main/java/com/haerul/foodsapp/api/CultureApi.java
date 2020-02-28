@@ -11,12 +11,13 @@ import com.haerul.foodsapp.model.RecentEntries;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
+import retrofit2.http.POST;
 
 public interface CultureApi {
 
-    @GET("recent/[10]/?app_api=658a6175c9b16498af6d99a018de17bd8fcdb8b9&entry_type=1")
+    @POST("recent/[10]/?app_api=658a6175c9b16498af6d99a018de17bd8fcdb8b9&entry_type=1")
     Call<RecentEntries> getRecentEntry();
 
-    @GET("element/?app_api=658a6175c9b16498af6d99a018de17bd8fcdb8b9")
+    @POST("element/?app_api=658a6175c9b16498af6d99a018de17bd8fcdb8b9")
     Call<CultureElements> getCultureElements();
 }
